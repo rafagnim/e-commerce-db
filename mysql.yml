@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      - MYSQL_DATABASE=dio
+      - MYSQL_ROOT_PASSWORD=3110
+
+    ports:
+      - 3306:3306
+
+#docker-compose -f mysql.yml up
+#netstat -o -n –a
